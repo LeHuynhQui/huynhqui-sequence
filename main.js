@@ -4,67 +4,65 @@ const footer = document.querySelector('footer')
 const text8 = document.querySelector('.text-8')
 
 
-AOS.init({
-    offset: 200,
-    duration: 600,
-    easing: 'ease-in-sine',
-    delay: 100,
-});
-window.addEventListener('scroll', e => {
-    let number = window.scrollY
-    console.log(number)
-    let stringNumberImg
-    // if (action.number <= 292) {
-
-    if (number <= 3) {
-        src.src = `./img/HACKER/hacker0001.jpg`
-
-    }
-
-    if (number % 3 === 0 && number >= 4 && number <= 678) {
-        stringNumberImg = (number - (number / 3 + 1)).toString().padStart(4, 0)
-        src.src = `./img/HACKER/hacker${stringNumberImg}.jpg`
-
-    }
-    //////////////////////////
-    if (number >= 679 && number <= 680) {
-        src.src = `./img/ADN/dna200_0001.jpg`
-    }
-
-    if (number % 3 === 0 && number >= 681 && number <= 1557) {
-        stringNumberImg = (number / 3 - 226).toString().padStart(4, 0)
-        src.src = `./img/ADN/dna200_${stringNumberImg}.jpg`
-    }
-
-
-    if (number >= 1558 && number <= 1559) {
-        src.src = `./img/ADN SPIDER MAN/ezgif-frame-008.jpg`
-    }
-
-    if (number % 3 === 0 && number >= 1560 && number < 1977) {
-        stringNumberImg = (number / 3 - 511).toString().padStart(3, 0)
-        src.src = `./img/ADN SPIDER MAN/ezgif-frame-${stringNumberImg}.jpg`
-    }
-
-    if (number >= 1977) {
-        src.src = `./img/ADN SPIDER MAN/ezgif-frame-148.jpg`
-        header.classList.add('d-none')
-        footer.classList.add('d-none')
-    } else {
-        header.classList.remove('d-none')
-        footer.classList.remove('d-none')
-    }
-
-    if (number <=1975) {
-        text8.classList.add('d-none')
-    } else {
-        text8.classList.remove('d-none')
-    }
-}) 
 
 
 
 window.addEventListener('DOMContentLoaded', e => {
+    // Xử lý ảnh khi scroll
+    window.addEventListener('scroll', e => {
+        let number = window.scrollY
+        console.log(number)
+        let stringNumberImg
+    
+        if (number <= 3) {
+            src.src = `./img/HACKER/hacker0001.jpg`
+    
+        }
+    
+        if (number % 3 === 0 && number >= 4 && number <= 678) {
+            stringNumberImg = (number - (number / 3 + 1)).toString().padStart(4, 0)
+            src.src = `./img/HACKER/hacker${stringNumberImg}.jpg`
+    
+        }
+        //////////////////////////
+        if (number >= 679 && number <= 680) {
+            src.src = `./img/ADN/dna200_0001.jpg`
+        }
+    
+        if (number % 3 === 0 && number >= 681 && number <= 1557) {
+            stringNumberImg = (number / 3 - 226).toString().padStart(4, 0)
+            src.src = `./img/ADN/dna200_${stringNumberImg}.jpg`
+        }
+    
+    
+        if (number >= 1558 && number <= 1559) {
+            src.src = `./img/ADN SPIDER MAN/ezgif-frame-008.jpg`
+        }
+    
+        if (number % 3 === 0 && number >= 1560 && number < 1977) {
+            stringNumberImg = (number / 3 - 511).toString().padStart(3, 0)
+            src.src = `./img/ADN SPIDER MAN/ezgif-frame-${stringNumberImg}.jpg`
+        }
+    
+        if (number >= 1977) {
+            src.src = `./img/ADN SPIDER MAN/ezgif-frame-148.jpg`
+            header.classList.add('d-none')
+            footer.classList.add('d-none')
+        } else {
+            header.classList.remove('d-none')
+            footer.classList.remove('d-none')
+        }
+    
+        if (number <=1975) {
+            text8.classList.add('d-none')
+        } else {
+            text8.classList.remove('d-none')
+        }
+    }) 
+
+
+
+// xử lý chữ khi scroll
     let tl0 = new TimelineMax()
     tl0
     .from('.logo-span-1', 0.1, {x:10, opacity:0})
@@ -98,14 +96,15 @@ window.addEventListener('DOMContentLoaded', e => {
     .setPin('.section1')
     .setTween(tl1)
 
-//////////////////////
+
+
+
+    //////////////////////
     let tl2 = new TimelineMax()
     tl2
     .from('.about', 2, {opacity:0})
     .to('.about', 1, {y:-100, opacity:0})
     
-
-
     let scene2 = new ScrollMagic.Scene({
         triggerElement: '.about',
         triggerHook:0,
@@ -117,10 +116,11 @@ window.addEventListener('DOMContentLoaded', e => {
     .setPin('.about')
     .setTween(tl2)
 
-//////////////////////
-    
 
 
+
+
+    //////////////////////
     let tl3 = new TimelineMax()
     tl3
     .from('.text-3', .1, {opacity:0})
@@ -137,6 +137,9 @@ window.addEventListener('DOMContentLoaded', e => {
     // .addIndicators()
     .setPin('.text-3')
     .setTween(tl3)
+
+
+
 
 
     /////////////////////////
@@ -158,6 +161,9 @@ window.addEventListener('DOMContentLoaded', e => {
     .setTween(tl4)
 
 
+
+
+
     //////////////////
     let tl5 = new TimelineMax()
     tl5
@@ -175,8 +181,6 @@ window.addEventListener('DOMContentLoaded', e => {
     // .addIndicators()
     .setPin('.text-5')
     .setTween(tl5)
-
-
 
 
 
@@ -243,7 +247,7 @@ window.addEventListener('DOMContentLoaded', e => {
     .setTween(tl8)
 })
 
-
+// xử lý scroll to top
 function toTop(e) {
     window.scrollTo(0,0)
 }
