@@ -1,0 +1,300 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 351vh;
+    color: #fff;
+    font-size: 1.6rem;
+font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 0 0 1rem rgb(94, 81, 255);
+}
+
+
+.background {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header {
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.section1 {
+    padding-top: 30rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    align-items: center;
+    flex-flow: column;
+    /* height: 10vh; */
+}
+.section1 h1 {
+    font-weight: 500;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+
+
+.text-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.text-3 h2 {
+    padding-top: 20rem;
+}
+
+
+
+.text-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.text-5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.text-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.text-7 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+
+.text-8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    color: #000;
+}
+
+.text-8 h2{
+    text-shadow: none;
+    margin-bottom: 2rem;
+
+}
+
+
+
+
+
+
+
+
+.link {
+    position: relative;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 50%;
+    animation: onClick 1s infinite alternate-reverse;
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.8);
+}
+
+@keyframes onClick {
+    from {
+        width: 0;
+        height: 0;
+    }
+    to {
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.color-xxx {
+    color: red;
+}
+
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-weight: 100;
+}
+
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.text-animation {
+    background-image: linear-gradient(to right,#673ab7 0,#e91e63 36%,#e91e63 65%,#673ab7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 6s infinite linear;
+}
+
+
+.d-none {
+    display: none;
+}
+
+
+@keyframes hue {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+
+
+
+.hire {
+    background-color: #000;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 3.5rem;
+    padding: .5rem 5rem;
+    border-radius: 5rem;
+    letter-spacing: .7rem;
+    font-weight: lighter;
+    position: relative;
+    overflow: hidden;
+}
+
+.hire::before {
+    content: '';
+    position: absolute;
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.199);
+    top: -10rem;
+    right: -30rem;
+    transition: all .5s;
+    z-index: -1;
+}
+
+.hire:hover::before {
+    cursor: pointer;
+    right: -20rem;
+}
+
+.scroll-top {
+    font-size: 4rem;
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    transition: all .5s ease-in-out ;
+    opacity: 1;
+}
+
+.scroll-top:hover {
+    cursor: pointer;
+}
+
+.bottom-cv {
+    position: fixed;
+    bottom: 5rem;
+    left: 5rem;
+    font-size: 2rem;
+}
